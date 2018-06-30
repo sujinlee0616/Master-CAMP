@@ -1,0 +1,107 @@
+@charset "utf-8";
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+/* 메인콘텐츠 레이아웃 */
+.main{
+  background: yellow;    
+/*   overflow: hidden; */
+/* 플로트 요소의 높이를 읽어올 수 있게 해주는 오버플로우 히든 코드 */
+}
+
+.header{
+  background: lime;
+}
+
+.header, .main, .footer{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+
+/* .main >*{
+  border: 1px solid blue;
+  height: 300px;
+} */
+
+
+.main::after{
+  content: "";
+  display: block;
+  clear: both;
+  background: grey;
+}
+
+
+/* 
+.clearfix{
+  height: 0!important;
+  clear: both;
+} */
+
+.recommend-book{
+  width: 320px;
+  float: left;
+  margin-right: 20px;
+  background: pink;
+}
+.news{
+  width: 660px;
+  float: right;
+  background: orange;
+}
+
+.board{
+  width: 320px;
+  float: left;
+  background: olive;
+}
+
+.favorite-site{
+  width: 235px;
+  float: right;
+  margin-left: 20px;
+  background: violet;
+}
+
+.twitter{
+  width: 405px;
+  background: skyblue;
+  margin-left: 20px;
+  float: left;
+}
+
+.footer{
+  background: lime;
+}
+
+
+
+
+
+/* .box{
+  width: 500px;
+  background: yellow;
+  border: 5px solid red;
+  font-size: 30px;
+}
+
+.box1{
+  background: rgba(0,255,0,0.5);
+  float: right;
+}
+.box3{
+  background: rgba(255,0,0,0.5);
+  float: right;
+}
+.box4{
+  background: pink;
+  float: left;
+  width: 300px;
+}
+.box2{
+  background: rgba(0,0,255,0.5);
+} */
+
+
