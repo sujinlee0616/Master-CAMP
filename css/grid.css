@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+.wrapper{
+  width: 1000px;
+  margin: 0 auto;
+  background: yellow;
+  display: grid;
+  grid-template-columns: 700px 300px;
+  grid-template-rows: 15vh 70vh 15vh;
+  grid-template-areas: "header  header"
+                        "main   ad"
+                        "footer footer";
+}
+
+.header{
+  background: pink;
+  grid-area: header;
+/*grid-column: 1/3;
+  grid-row: 1/2;
+ */
+/*위와 똑같은 거임. 이거는 span2로 해서, 합친다는 뜻으로 쓴거... 
+  이거 뭔지 잘 모르게따 안써 안해
+  grid-column: 1/ sapn 2;
+  grid-row: 1/2; */
+
+/*위와 똑같은 거임. 이거는 위에꺼를 더 짧게 쓴거... 
+  근데 이게 좀 헷갈릴 수 있어서 위에꺼가 젤 좋은듯
+  grid-area: 1/1/2/3;
+  grid-area은 /(슬래쉬)로 구분지어 grid-row-start, grid-column-start, grid-row-end, grid-column-end순으로 입력 가능합니다. */
+
+/*위와 똑같은 거임. 이걸 걍 짧게 쓰면 위에처럼 쓸 수 있음...
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2; */
+}
+
+.main{
+  background: lime;
+  grid-area: main;
+/*   grid-column: 1;
+  grid-row: 2; */
+  /* 이거는 왜 스타트번호만 쓰고 엔드 번호를 안 쓰지? 
+  그리드가 한 칸일 때는 안 써도 된다고 함!!
+  */
+}
+
+.ad{
+  background: orange;
+  grid-area: ad;
+/*   grid-column: 2;
+  grid-row: 2; */
+}
+
+.footer{
+  background: skyblue;
+  grid-area: footer;
+/*   grid-column: 1/ sapn 2;
+  grid-row: 3; */
+}
+
+
