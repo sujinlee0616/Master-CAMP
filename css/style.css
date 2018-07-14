@@ -91,6 +91,13 @@ body{
   background: lime;
 }
 
+/* 공통 안내링크 */
+.member{
+  background: yellow;
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* 공통 네비게이션 */
 .navigation {
   background: aqua;
@@ -147,6 +154,12 @@ body{
 
 
   /* 모바일 헤더 */
+
+  /* 모바일 안내링크 */
+  .member a{
+    color: #fff;
+    margin-left: 1em;
+  }
 
 
   /* 모바일 네비게이션 */
@@ -209,6 +222,19 @@ body{
   /*데스크탑 헤더*/
  /*  .header {   
   } */
+
+
+  /* 데스크탑 안내링크 */
+.member{
+  position: relative;
+  right: -1em;
+}
+.member li:nth-child(-n+2)::after{
+  content: "|";
+}
+.member a{
+  padding: 0 1em;
+}
 
   /*데스크탑 네비게이션*/
   .nav-container {
