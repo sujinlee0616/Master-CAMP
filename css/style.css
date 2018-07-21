@@ -245,7 +245,55 @@ input[name="search"]{
 }
 
   /* 모바일 네비게이션 */
+  .nav-container{
+    background: #38302e;
+  }
 
+  /* 모바일 메인 메뉴 제어 버튼 */
+  .btn-menu{
+    background: red;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    overflow: hidden;
+  }
+  .btn-menu-act{
+    background: blue;
+  }
+  .menubar{
+    position: absolute; 
+    width: 100%;
+    height: 20%;
+    background: #fff;
+    left: 0;    
+    transition: all 200ms;
+  }
+  .menubar-top{
+    top: 0;
+  }
+  .menubar-middle{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .menubar-bottom{
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  .btn-menu-act .menubar-top{
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  .btn-menu-act .menubar-middle{
+    transform: translate(-100%, -50%);
+    /* 위에서 translateY준거 유지하면서 translateX하려고 이렇게 줌. 수넛대로 X값, Y값. */
+  }
+  .btn-menu-act .menubar-bottom{
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
 
   /* 모바일 메인 */
   .main{
@@ -375,6 +423,9 @@ input[name="search"]{
     box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.85), 0 2px 5px 0 rgba(0,0,0,0.85);
     /* border-top: 2px solid #000;
     border-bottom: 2px solid #000; */
+  }
+  .btn-menu{
+    display: none;
   }
   .menu {
     display: flex;
