@@ -398,7 +398,12 @@ input[name="search"] {
 
 /* 공통 푸터 */
 .footer {
-  background: violet;
+  background: #988574;
+  padding: 15px 20px;
+  color: #fff;
+}
+.address {
+  margin-bottom: 15px;
 }
 
 @media screen and (max-width: 999px) {
@@ -601,7 +606,14 @@ input[name="search"] {
   .twitter-profile{
     text-align: right;
   }
+  /* 모바일 슬로건 */
+  .slogan{
+    display: none;
+  }
   /* 모바일 푸터 */
+  .address span{
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -630,6 +642,7 @@ input[name="search"] {
   .header,
   .navigation,
   .main,
+  .slogan,
   .footer {
     width: 1000px;
     margin: 0 auto;
@@ -750,14 +763,16 @@ input[name="search"] {
   .recommend-book-cover {
     width: 60%;
   }
-
+  /* 데스크탑 게시판 */
   .news {
     flex-basis: 660px;
   }
+
   .board {
     width: 320px;
     /* flex-basis로 넓이를 줘버리면, white-space먹였을 때 문제가 생긴다. */
   }
+  /* 데스크탑 인기사이트 */
   .favorite-site {
     flex-basis: 235px;
     order: 1;
@@ -768,9 +783,47 @@ input[name="search"] {
   .twitter-wrap {
     min-height: 100px;
   }
+  /* 데스크탑 슬로건 */
+  .slogan{
+    position: relative;
+  }
+  .slogan-heading{
+    width: 110px;
+    height: 83px;
+    position: absolute;
+    left: 35px;
+    bottom: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slogan-heading::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("images/coffee.png") no-repeat;
+  }
+
+  .slogan-content{
+    padding: 10px 50px 10px 165px;
+  }
+  .slogan-content q{
+    font-weight: 700;
+  }
+  .slogan-content q::before{
+    content: '"';
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+    top: 10px;
+  }
 
   /*데스크탑 푸터*/
   .footer-container {
     background-color: #988574;
+    text-align: center;
   }
 }
