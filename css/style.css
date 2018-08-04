@@ -3,90 +3,174 @@
 @import url(fonts.css);
 
 /* 박스 공통 */
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 /* 스타일 초기화 */
-h1, ul{
+h1,
+ul {
   margin: 0;
 }
 /* 스타일 초기화 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, main, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1.15;
+  line-height: 1.15;
 }
 ul {
-	list-style: none;
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* 숨김 콘텐츠 */
-legend, .a11y{
+legend,
+.a11y {
   position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
   margin: -1px;
-  clip: rect(0,0,0,0);
-} 
+  clip: rect(0, 0, 0, 0);
+}
 
 /* clearfix - float 이슈를 해결하기 위한 클래스 모듈 */
-.clearfix::after{
+.clearfix::after {
   content: "";
   display: block;
   clear: both;
 }
 
-
 /* 하이퍼링크 스타일 */
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
 /* 본문 스타일 */
-html{
+html {
   font-size: 10px;
 }
 
-body{
+body {
   /* font-size: 1.6rem; */
   color: #181818;
-  font-family: 'Noto Sans Regular', sans-serif;
+  font-family: "Noto Sans Regular", sans-serif;
 }
 
 /* 가상 요소를 활용한 그리드 설정 */
@@ -106,21 +190,21 @@ body{
  */
 
 /* 공통 반응형 콘텐츠 */
-.rwd-img{
+.rwd-img {
   max-width: 100%;
   height: auto;
 }
-.rwd-video{
+.rwd-video {
   width: 100%;
   height: auto;
 }
-.rwd-iframe{
+.rwd-iframe {
   position: relative;
   width: 100%;
   height: 0 !important;
   padding-top: calc(315 / 560 * 100%);
 }
-.rwd-iframe iframe{
+.rwd-iframe iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -128,116 +212,188 @@ body{
   height: 100%;
 }
 
-
-
 /* 공통 레이아웃 */
-.header, .navigation, .main, .footer {
+.header,
+.navigation,
+.main,
+.footer {
   width: 100%;
 }
 
 /* 공통 헤더 */
 
-
 /* 공통 안내링크 */
 
-
 /* 공통 검색폼 */
-input[name="search"]{
+input[name="search"] {
   border: 1px solid #aaa;
   border-radius: 3px;
   padding: 5px 5px 5px 10px;
 }
 
-
 /* 공통 메인 */
-
+/* 공통 메인 섹션 */
+.main > section{
+  margin-top: 20px;
+}
 /* 공통 메인 섹션 제목 */
-.section-heading{
+.section-heading {
   font-size: 1.3em;
   font-family: "Noto Sans Bold";
   height: 60px;
   padding-left: 60px;
   background: url("images/sprite_main.png") no-repeat 0 0;
 }
-.en-heading{
+.en-heading {
   display: block;
   text-transform: capitalize;
 }
-.news-heading{
+.news-heading {
   background-position: 0 -230px;
 }
-.board-heading{
+.board-heading {
   background-position: 0 -115px;
 }
-.twitter-heading{
+.twitter-heading {
   background-position: 0 -460px;
 }
-.favorite-site-heading{
+.favorite-site-heading {
   background-position: 0 -345px;
 }
 
 /* 영어제목 폰트컬러 변경 */
-.recommend-book-heading .en-heading{
+.recommend-book-heading .en-heading {
   color: #abd375;
 }
-.news-heading .en-heading{
+.news-heading .en-heading {
   color: #e8ca58;
 }
-.board-heading .en-heading{
+.board-heading .en-heading {
   color: #c7b39a;
 }
-.twitter-heading .en-heading{
+.twitter-heading .en-heading {
   color: #6aaee6;
 }
-.favorite-site-heading .en-heading{
+.favorite-site-heading .en-heading {
   color: #eea60a;
 }
 
 /* 공통 메인 섹션 문단 */
-.main [class$="-summary"]{
+.main [class$="-summary"] {
   line-height: 1.5;
 }
 /* 클래스가 summary로 끝나는 애들에게는 줄간격 스타일 자동부여 */
 
 /* 공통 추천 서적 */
-.recommend-book-cover{
+.recommend-book-cover {
   text-align: center;
   margin: 10px auto;
 }
-.recommend-book-detail{ 
+.recommend-book-detail {
   text-align: center;
   margin: 10px 0;
 }
-.recommend-book-author, .recommend-book-author-name{
+.recommend-book-author,
+.recommend-book-author-name {
   display: inline;
 }
-.recommend-book-grade{
+.recommend-book-grade {
   font-size: 1.8em;
   color: #abd375;
 }
-.recommend-book-summary{
-  background: pink;
-  /* text-align: justify; */
-}
 
 /* 공통 새소식 */
-.news-container{
+.news-container {
   margin: 20px 0;
 }
-.news-date{
+.news-date {
   display: block;
   text-align: right;
   margin-top: 10px;
 }
 
-.board{
-  background: skyblue;
+/* 공통 게시판 */
+.board {
+  position: relative;
 }
-.favorite-site{
-  background: teal;
+.board-list {
+  margin-top: 20px;
 }
-.twitter{
-  background: tomato;
+.board-list li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.board-list a {
+  width: calc(100% - 110px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.board-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.board-more::before {
+  color: hsla(100, 50%, 60%, 1);
+}
+
+/* 공통 인기사이트 */
+.favorite-site-list {
+  margin-top: 20px;
+  overflow: hidden;
+  counter-reset: 0;
+}
+.favorite-site-list li {
+  counter-increment: number;
+  margin-top: 10px;
+}
+.favorite-site-list li::before {
+  content: counter(number, decimal);
+  background-color: #eea60a;
+  color: #fff;
+  padding: 0 0.5em;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+
+/* 공통 트위터 */
+.twitter-wrap {
+  position: relative;
+  padding-right: 25%;
+}
+.twitter-user-info {
+  margin-top: 20px;
+}
+.twitter-user-name {
+  color: #6aaee6;
+}
+.twitter-user-id {
+  font-weight: 700;
+}
+.twitter-profile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  padding-left: 1em;
+}
+.twitter-thumbnail {
+  border: 1px solid #000;
+  padding: 5px;
+  border-radius: 50%;
+}
+.twitter-summary {
+  margin: 10px 0;
+}
+.twitter-date {
+  display: block;
+  text-align: right;
+}
+.twitter-user-name,
+.twitter-user-id {
+  display: inline;
 }
 
 /* 공통 푸터 */
@@ -245,10 +401,9 @@ input[name="search"]{
   background: violet;
 }
 
-
-@media screen and (max-width: 999px){
+@media screen and (max-width: 999px) {
   /* 모바일 그리드 설정 - 4col */
-  .grid-show{
+  .grid-show {
     width: 100%;
     position: absolute;
     top: 0;
@@ -258,14 +413,13 @@ input[name="search"]{
     grid-template-rows: 100vh;
     grid-column-gap: 20px;
   }
-  .grid-show .grid-unit{
-    background-color: rgba(0,0,255,0.5);
+  .grid-show .grid-unit {
+    background-color: rgba(0, 0, 255, 0.5);
   }
-   .grid-show .grid-unit:nth-child(1), 
-   .grid-show .grid-unit:nth-child(6){
+  .grid-show .grid-unit:nth-child(1),
+  .grid-show .grid-unit:nth-child(6) {
     width: 0;
   }
-
 
   /* 모바일 바디 */
   body {
@@ -273,22 +427,22 @@ input[name="search"]{
   }
 
   /* 모바일 헤더 */
-  .header{
+  .header {
     background: #38302e;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
   }
   /* 모바일 로고 */
-  .logo{
+  .logo {
     padding: 10px 0;
   }
-  .logo img{
+  .logo img {
     display: block;
   }
 
   /* 모바일 안내링크 */
-  .member{
+  .member {
     display: flex;
     justify-content: flex-end;
     background: #988574;
@@ -296,31 +450,31 @@ input[name="search"]{
     order: -1;
     padding: 10px 20px;
   }
-  .member a{
+  .member a {
     color: #fff;
     margin-left: 1em;
   }
 
   /* 모바일 검색폼 */
-  .search-form{
+  .search-form {
     padding-bottom: 10px;
   }
-  .search-form fieldset{
+  .search-form fieldset {
     font-size: 0;
   }
-/*   .search-form legend, input[name="search"], .btn-search{
+  /*   .search-form legend, input[name="search"], .btn-search{
     font-size: 1.6rem;
   } */
-  .search-form *{
+  .search-form * {
     font-size: 1.6rem;
   }
 
-  input[name="search"]{
+  input[name="search"] {
     width: 100%;
     width: calc(100% - 40px);
     font-size: 1.6rem;
   }
-  .btn-search{
+  .btn-search {
     position: relative;
     width: 30px;
     height: 30px;
@@ -329,25 +483,25 @@ input[name="search"]{
     margin-left: 10px;
     background: transparent;
   }
-.btn-search::after{
-  content: "";
-  cursor: pointer;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: url("images/btn_search.png");
-  background-size: 100% 100%;
-}
+  .btn-search::after {
+    content: "";
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("images/btn_search.png");
+    background-size: 100% 100%;
+  }
 
   /* 모바일 네비게이션 */
-  .nav-container{
+  .nav-container {
     background: #38302e;
   }
 
   /* 모바일 메인 메뉴 제어 버튼 */
-  .btn-menu{
+  .btn-menu {
     width: 30px;
     height: 30px;
     border: 0;
@@ -359,40 +513,40 @@ input[name="search"]{
     background: transparent;
   }
 
-  .menubar{
-    position: absolute; 
+  .menubar {
+    position: absolute;
     width: 100%;
     height: 20%;
     background: #fff;
-    left: 0;    
+    left: 0;
     transition: all 200ms;
   }
 
-  .menubar-top{
+  .menubar-top {
     top: 0;
   }
-  .menubar-middle{
+  .menubar-middle {
     top: 50%;
     transform: translateY(-50%);
   }
-  .menubar-bottom{
+  .menubar-bottom {
     top: 100%;
     transform: translateY(-100%);
   }
-  .btn-menu-act .menubar-top{
+  .btn-menu-act .menubar-top {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
   }
-  .btn-menu-act .menubar-middle{
+  .btn-menu-act .menubar-middle {
     transform: translate(-100%, -50%);
     /* 위에서 translateY준거 유지하면서 translateX하려고 이렇게 줌. 수넛대로 X값, Y값. */
   }
-  .btn-menu-act .menubar-bottom{
+  .btn-menu-act .menubar-bottom {
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
   }
   /* 모바일 메인 메뉴 */
-  .menu{
+  .menu {
     background: #000;
     color: #fff;
     position: fixed;
@@ -404,32 +558,32 @@ input[name="search"]{
     transform: translateX(-100%);
     transition: all 200ms;
   }
-  .menu-act{
+  .menu-act {
     transform: translateX(0) !important;
   }
 
-  .menu-item{
+  .menu-item {
     margin: 10px 0;
   }
 
-
-  .sub-menu{
-    display: none; 
+  .sub-menu {
+    display: none;
   }
-  .menu-item-act .sub-menu{
+  .menu-item-act .sub-menu {
     display: block !important;
-  }  
+  }
 
-  .sub-menu li{
+  .sub-menu li {
     margin: 10px 0 10px 20px;
   }
-  
+
   /* 모바일 메인 */
-  .main{
+  .main {
     display: flex;
     flex-direction: column;
-/*이거 테스트해보자 */
-/*  justify-content: flex-start;
+    padding: 0 20px;
+    /*이거 테스트해보자 */
+    /*  justify-content: flex-start;
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
@@ -437,26 +591,22 @@ input[name="search"]{
   }
 
   /* 모바일 추천서적 */
-  .recommend-book-cover{
+  .recommend-book-cover {
     width: 70%;
   }
-
-/* 테스트코드 */
-/*   .main > *{
-    height: 10vh;
-    width: 50%;
-    flex-grow: 1;
+/* 모바일 트위터 */
+  .twitter-wrap{
+   min-height: 125px;
+  } 
+  .twitter-profile{
+    text-align: right;
   }
- */
   /* 모바일 푸터 */
-
-
 }
 
 @media screen and (min-width: 1000px) {
-
   /* 데스크탑 그리드 - 12 col */
-  .grid-show{
+  .grid-show {
     position: absolute;
     top: 0;
     left: 50%;
@@ -467,15 +617,14 @@ input[name="search"]{
     grid-column-gap: 20px;
   }
 
-  .grid-show .grid-unit{
-    background-color: rgba(255,0,0,0.5);
+  .grid-show .grid-unit {
+    background-color: rgba(255, 0, 0, 0.5);
   }
 
   /* 데스크탑 바디 */
-  body{
+  body {
     font-size: 1.6rem;
   }
-
 
   /* 웹카페 데스크탑 레이아웃 */
   .header,
@@ -487,10 +636,10 @@ input[name="search"]{
   }
 
   /*데스크탑 헤더*/
-  .header{
+  .header {
     position: relative;
   }
-/*  .header{
+  /*  .header{
    display: grid;
    grid-template-columns: repeat(12, 65px);
    grid-template-rows: 50px 50px;
@@ -498,70 +647,71 @@ input[name="search"]{
    align-items: center;
  } */
 
-/* 데스크탑 로고 */
-.logo{
-  grid-column: 1 / span 3;
-  grid-row: 1 / span 2;
-  position: absolute;
-  /* 하위요소를 position absolute의 기준점은, 자기보다 상위요소의 position: static이 아닌 애를 기준점으로 한다. 
+  /* 데스크탑 로고 */
+  .logo {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+    position: absolute;
+    /* 하위요소를 position absolute의 기준점은, 자기보다 상위요소의 position: static이 아닌 애를 기준점으로 한다. 
   따라서, position:relative인 header기준으로 정렬됨 */
-  left: 0;
-  top: 50%;
-  margin-top: -30px;
-}
+    left: 0;
+    top: 50%;
+    margin-top: -30px;
+  }
   /* 데스크탑 안내링크 */
-.member{
-  grid-column: 9 / span 4;
-  position: relative;
-  right: -16px;
-  font-size: 0;
-  text-align: right;
-}
-.member li{
-  font-size: 1.6rem;
-  display: inline-block;
-}
+  .member {
+    grid-column: 9 / span 4;
+    position: relative;
+    right: -16px;
+    font-size: 0;
+    text-align: right;
+  }
+  .member li {
+    font-size: 1.6rem;
+    display: inline-block;
+  }
 
-.member li:nth-child(-n+2)::after{
-  content: "|";
-}
-.member a{
-  padding: 10px 1em;
-  display: inline-block;
-}
+  .member li:nth-child(-n + 2)::after {
+    content: "|";
+  }
+  .member a {
+    padding: 10px 1em;
+    display: inline-block;
+  }
 
-/* 데스크탑 검색 폼 */
-.search-form{
-  grid-column: 7 / span 6;
-  grid-row: 2;
-  align-self: flex-end;
-  justify-self: end;
-  padding: 10px 0;
-}
+  /* 데스크탑 검색 폼 */
+  .search-form {
+    grid-column: 7 / span 6;
+    grid-row: 2;
+    align-self: flex-end;
+    justify-self: end;
+    padding: 10px 0;
+  }
 
-.search-form fieldset{
-  float: right;
-}
+  .search-form fieldset {
+    float: right;
+  }
 
-input[name="search"]{
-  width: 400px;
-}
-.btn-search{
-  border: 1px solid #aaa;
-  border-radius: 3px;
-  background: #988574;
-  color: #fff;
-  padding: 5px 10px;
-}
+  input[name="search"] {
+    width: 400px;
+  }
+  .btn-search {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background: #988574;
+    color: #fff;
+    padding: 5px 10px;
+  }
 
   /*데스크탑 네비게이션*/
-  .nav-container{
+  .nav-container {
     background-color: #988574;
-    box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.85), 0 2px 5px 0 rgba(0,0,0,0.85);
+    box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.85),
+      0 2px 5px 0 rgba(0, 0, 0, 0.85);
     /* border-top: 2px solid #000;
     border-bottom: 2px solid #000; */
   }
-  .btn-menu{
+  .btn-menu {
     display: none;
   }
   .menu {
@@ -570,19 +720,18 @@ input[name="search"]{
     color: #fff;
     padding: 20px 0;
   }
-  .sub-menu li:hover{
+  .sub-menu li:hover {
     color: yellow;
   }
-  .menu-item-text{
+  .menu-item-text {
     font-size: 1.8rem;
-    font-family: 'Noto Sans bold', sans-serif;    
+    font-family: "Noto Sans bold", sans-serif;
     text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
   }
-  
-  .sub-menu li{
+
+  .sub-menu li {
     margin: 10px 0 0 20px;
   }
-
 
   /*데스크탑 메인 콘텐츠*/
   .main {
@@ -590,36 +739,38 @@ input[name="search"]{
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .main > *{
+  .main > * {
     flex: auto 0 1;
   }
 
   /* 데스크탑 추천서적 */
-  .recommend-book{
+  .recommend-book {
     flex-basis: 320px;
   }
-  .recommend-book-cover{
+  .recommend-book-cover {
     width: 60%;
   }
 
-
-  .news{
+  .news {
     flex-basis: 660px;
-  }  
-  .board{
-    flex-basis: 320px;
-  }  
-  .favorite-site{
-    flex-basis: 235px;
   }
-  .twitter{
+  .board {
+    width: 320px;
+    /* flex-basis로 넓이를 줘버리면, white-space먹였을 때 문제가 생긴다. */
+  }
+  .favorite-site {
+    flex-basis: 235px;
+    order: 1;
+  }
+  .twitter {
     flex-basis: 405px;
+  }
+  .twitter-wrap {
+    min-height: 100px;
   }
 
   /*데스크탑 푸터*/
   .footer-container {
     background-color: #988574;
   }
-
-
 }
