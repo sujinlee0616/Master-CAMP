@@ -343,7 +343,7 @@ input[name="search"] {
 .favorite-site-list {
   margin-top: 20px;
   overflow: hidden;
-  counter-reset: 0;
+  counter-reset: number;
 }
 .favorite-site-list li {
   counter-increment: number;
